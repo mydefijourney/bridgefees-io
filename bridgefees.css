@@ -285,7 +285,8 @@ a.routeButton:hover {
 .route_connext td.quotes_route {
 	background: url(img/connext-logo.png) no-repeat;
 }
-.route_celercbridge td.quotes_route {
+.route_celercbridge td.quotes_route,
+.route_celer td.quotes_route {
 	background: url(img/celer-logo.png) no-repeat;
 }
 .route_symbiosis td.quotes_route {
