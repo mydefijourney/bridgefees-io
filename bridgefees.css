@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@200;300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body { 
+	background: rgb(20,25,41);
+    color:#eee;
+	font-family:'Barlow', sans-serif;
+	margin:0; padding: 0;
+	text-align: center;
+}
+body>.gradient { 
+	background: radial-gradient(circle, rgba(22, 77, 79, 1) 0%, rgba(20, 25, 41, 1) 40%) fixed;
+	background-position-y:-400px; 
+	background-repeat: no-repeat;
+	transition: all 5s;
+}
+body>.gradient2 { 
+	background-position-y:-200px; 
+}
+.fadeIn { 
+	transition: all 2s;
+	opacity: 0;
+}
+.visible { 
+	margin-top:0px;
+	transition: all 2s;
+	opacity: 1 !important;
+}
+.container-wrapper { 
+	padding: 0px 40px;
+}
+.container {
+	max-width: 1400px;
+	margin: auto;
+	padding-top:40px; 
+	text-align: left;
+	padding-bottom:40px;
+	min-height: 100vh;
+}
+.header {
+	padding:40px 0px 20px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size:18px;
+	transition: all 0.5s;
+}
+.header img {
+	max-height:40px;
+	max-width:100%;
+}
+.status {
+	position: relative; 
+	transition: all 0.5s;
+}
+.status-inner div {
+	background: #232323;
+	padding: 8px 10px;
+	width: 180px;
+	text-align: center;
+	font-family: 'Ubuntu Mono', sans-serif;
+	font-size:16px;
+	color:#a0a0a0;
+	font-weight:400 !important;
+}
+.status i.fa-solid.fa-gas-pump {
+	zoom: 0.8;
+	margin-left: 4px;
+}
+.status div a {
+	font-weight:bold;
+	color:#53f0f8;
+	text-decoration:none; 
+}
+.status .price-gas {
+	position: absolute;
+	left:0px;
+	top:0px
+}
+.status .powered-by {
+	position: absolute;
+	right:0px;
+	top:0px
+}
+.status .gasPrice, .status .ethPrice { 
+	transition: all 1s;
+}
+.status .flash { 
+	color:#54f0f8; 
+	transition: all 0s;
+}
+.status .whiteFlash { 
+	color:#ffffff; 
+	transition: all 0s;
+}
+.status .greenFlash { 
+	color:#54f0f8; 
+	transition: all 0s;
+}
+.status .redFlash { 
+	color:#f56d69; 
+	transition: all 0s;
+}
+.content { 
+	transition: all 0.5s;
+}
+hr { 
+	border: 1px solid #54f0f8;
+	border-bottom: 0px;
+	height: 0px;
+	width: 100%; 
+	opacity: 0.2;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+h1, h2, h3 { 
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+}
+h3 { 
+	font-size:18px;
+	margin:0px 0px 10px;
+	padding:0px; 
+	letter-spacing: -0.5px;
+	margin:0px 0px 10px;
+	padding:0px; 
+}
+ul.action-options {
+	margin: 0px 0px 30px;
+	padding: 0px;
+	list-style-type: none;
+}
+.action-options li {
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	width: 200px;
+	max-width: 200px;
+	display: inline-block;
+	margin-right: 12.5px;
+	vertical-align: top;
+	padding:6px 8px;
+	color:#aaa;
+	transition: all 0.5s;
+	opacity:0.5;
+}
+.action-options li p {
+	color:#bbb;
+	font-size:14px;
+	margin-bottom:5px;
+}
+.action-options li.active, .action-options li:hover {
+	color: #fff;
+	border: 1px solid ##fff;
+	cursor: pointer;
+	opacity: 1;
+}
+.action-options li:hover {
+	color: #eee;
+	border: 1px solid ##eee;
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+	cursor: pointer;
+	opacity: 1;
+}
+.action-options i.fa.fa-chevron-circle-left.slick-arrow {
+	position: absolute;
+	left: -20px;
+	top: calc(50% - 10px);
+	opaticy: 0.3;
+	cursor: pointer;
+}
+.action-options i.fa.fa-chevron-circle-right.slick-arrow {
+	position: absolute;
+	right: -20px;
+	top: calc(50% - 10px);
+	opaticy: 0.3;
+	cursor: pointer;
+}
+.results .results-filters { 
+	text-align: right;
+	margin-top:-52px;
+}
+span.from-filters,
+span.to-filters, 
+span.clearFilters {
+	margin:0px 0px 0px 60px;
+	display:inline-block;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+span.clearFilters:hover { 
+	border-radius: 5px;
+	background: rgba(255,255,255,0.1);
+	text-decoration: underline;
+}
+
+
+.results .table-container { 
+	overflow-x: scroll;
+}
+.results img.network-logo {
+	height: 20px;
+	vertical-align: bottom;
+	margin: 0px 3px -5px 3px;
+	cursor: pointer;
+	padding: 3px;
+	border: 1px solid transparent;
+}
+.results img.network-logo.active {
+	background: #53f0f826;
+	border-radius: 3px;
+	border: 1px solid #53f0f8;
+}
+.results table { 
+	width: 1400px;
+	border-collapse: collapse; 
+}
+.results table th  { 
+	text-align: left;
+	text-transform: uppercase;
+	background: transparent !important;
+}
+.results table tr { 
+	border-bottom: 1px solid #204654;
+}
+.results table tr:first-child { 
+	background: transparent !important;
+}
+.results table tr:nth-child(odd) { 
+	background: rgba(161, 161, 161, 0.05);
+}
+.results table tr:nth-child(even) { 
+	background: rgba(161, 161, 161, 0.2);
+}
+.results table th, .results table td { 
+	padding:20px 10px;
+	vertical-align: middle;
+}
+.results table td span.usdAmount, .results table td span.via { 
+	font-size:12px; 
+	color:#858585;
+	display:block; 
+}
+
+.results table th.tablesorter-headerUnSorted:not(.sorter-false) .tablesorter-header-inner:after {
+	content: '\f0dc';
+	font-family: "Font Awesome 5 Free";
+	margin-left: 5px;
+}
+
+.results table th.tablesorter-headerDesc:not(.sorter-false) .tablesorter-header-inner:after {
+	content: '\f0dd';
+	font-family: "Font Awesome 5 Free";
+	margin-left: 5px;
+}
+
+.results table th.tablesorter-headerAsc:not(.sorter-false) .tablesorter-header-inner:after {
+	content: '\f0de';
+	font-family: "Font Awesome 5 Free";
+	margin-left: 5px;
+}
+
+
+
+a.routeButton {
+	border:1px solid #53f0f8;
+	color:#53f0f8;
+	text-decoration:none; 
+	text-transform:uppercase; 
+	padding:5px 10px; 
+	font-size:12px;
+	transition: all 0.5s;
+	border-radius:2px;
+}
+
+a.routeButton:hover {
+	text-decoration: underline;
+	box-shadow: 0px 0px 10px #53f0f8;
+	cursor: pointer;
+}
+
+/* routes */
+.route_across td.quotes_route {
+	background: url(img/across-0de1e30c.svg) no-repeat;
+}
+.route_connext td.quotes_route {
+	background: url(img/connext-logo.png) no-repeat;
+}
+.route_celercbridge td.quotes_route {
+	background: url(img/celer-logo.png) no-repeat;
+}
+.route_symbiosis td.quotes_route {
+	background: url(img/symbiosis-logo.png) no-repeat;
+}
+.route_synapse td.quotes_route {
+	background: url(img/synapse-logo.png) no-repeat;
+}
+.route_hop td.quotes_route {
+	background: url(img/hop-logo.png) no-repeat;
+}
+.route_polygon-bridge td.quotes_route {
+	background: url(img/polygon-pos.svg) no-repeat;
+}
+.route_arbitrum-bridge td.quotes_route {
+	background: url(img/arbitrum-logo.svg?) no-repeat;
+}
+.route_hyphen td.quotes_route {
+	background: url(img/hyphen-logo.svg) no-repeat;
+}
+td.quotes_route {
+	padding-left: 45px !important;
+	background-size: 24px !important;
+	background-position: 12px center !important;
+	text-transform: capitalize;
+}
+td.quotes_route span { 
+	text-transform: initial;
+}
+span.chip {
+    text-transform: uppercase !important;
+    font-size: 0.8em;
+    padding: 2px 8px;
+    color: black;
+    background: #49dde5;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.quotes_totalcost span.chip, .quotes_youget span.chip { 
+	margin-left:5px;
+}
+
+/* chains */
+td.chain_1 {
+	padding-left: 45px !important;
+	background: url(img/ethereum-logo.svg) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+td.chain_10 {
+	padding-left: 45px !important;
+	background: url(img/optimism-logo.svg) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+td.chain_137 {
+	padding-left: 45px !important;
+	background: url(img/polygon.png) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+td.chain_324 {
+	padding-left: 45px !important;
+	background: url(img/zksync-logo.svg) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+td.chain_8453 {
+	padding-left: 45px !important;
+	background: url(img/base-logo.svg) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+td.chain_42161 {
+	padding-left: 45px !important;
+	background: url(img/arbitrum-logo.svg) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+td.chain_59144 {
+	padding-left: 45px !important;
+	background: url(img/linea-logo.svg) no-repeat;
+	background-size: 24px;
+	background-position: 12px center;
+}
+@media screen and (max-width:1250px) { 
+	.results .results-filters { 
+		margin-top: 0px;
+	}
+	span.from-filters,
+	span.to-filters, 
+	span.clearFilters {
+		margin:0px 0px 10px 20px;
+		display:inline-block;
+	}
+}
+@media screen and (max-width: 540px) { 
+	.status .price-gas {
+    	position: unset;
+    	margin: -20px auto -40px;
+	}
+	.status {
+		zoom: 0.8;
+	}
+	.action-options li {
+		max-width: calc(100vw - 100px);
+	}
+}

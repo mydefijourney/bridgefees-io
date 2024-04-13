@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>BridgeFees.io</title>
+	<link href="bridgefees.css?sid=2024-04-11i" rel="stylesheet" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/bridgefees-favicon1.png">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://kit.fontawesome.com/12158504f8.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
+	<script src="bridgefees.js?sid=2024-04-11l"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QG441YND4F"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-QG441YND4F');
+	</script>
+</head> 
+<body>
+	<div class="gradient gradient2">
+		<div class="container-wrapper">
+			<div class="container">
+				<div class="status">
+					<div class="status-inner fadeIn" id="statusBar">
+						<div class="price-gas" id="priceBar">
+							<span class="ethPrice"><i class="fa-brands fa-ethereum"></i> <span class="ethPrice-number">3,688.19</span></span>
+							<span class="gasPrice"><i class="fa-solid fa-gas-pump"></i> <span class="gasPrice-number">XX</span> gwei</span>
+						</div>
+						<!-- 
+						<div class="powered-by" id="poweredByBar">
+							powered by <a onclick="alert('Coming soon!');">straddl.io</a>
+						</div>
+						-->
+					</div>
+				</div>
+				<div class="header fadeIn" id="headerBar">
+					<div class="logo">
+						<h1><img src="img/bridgefees-io-logo1.png" alt="BridgeFees.io"></h1>
+					</div>
+					<p class="intro">
+						BridgeFees.io tracks the costs of performing various bridge actions across Ethereum L1 and L2s.
+					</p>
+				</div>
+				<div class="content" id="contentBox">
+					<div class="looking-to fadeIn" id="lookingTo">
+						<h2>I'm looking to&hellip;</h2>
+						<ul class="action-options">
+							<li class="active">
+								<h3>Just Bridge</h3>
+								<p>
+									Move ETH, USDC, or other ERC-20 tokens between L1&gt;L2 or L2&lt;L1
+								</p>
+							</li>
+							<li onclick="alert('Coming soon!');">
+								<h3>Cross-Chain Swap</h3>
+								<p>
+									Send tokens from one chain and receive a different token on the other
+								</p>
+							</li>
+							<li onclick="alert('Coming soon!');">
+								<h3>Bridge + Aave deposit</h3>
+								<p>
+									Bridge from one chain and directly deposit into Aave on the other as collateral
+								</p>
+							</li>
+							<li onclick="alert('Coming soon!');">
+								<h3>Bridge + Aave borrow</h3>
+								<p>
+									Bridge + deposit token into Aave, while also borrowing another token from Aave
+								</p>
+							</li>
+							<li onclick="alert('Coming soon!');">
+								<h3>Cross-Chain Repay</h3>
+								<p>
+									Bridge from one chain over to another and immediately pay down Aave debt
+								</p>
+							</li>
+							<li onclick="alert('Coming soon!');">
+								<h3>L2 &gt; Across LP Staking</h3>
+								<p>
+									Bridge from an L2 and deposit/stake tokens into the Across Liquidity Pool for yield
+								</p>
+							</li>
+						</ul>
+						<hr />
+					</div>
+					<div class="results fadeIn" id="resultsBox">
+						<h2>Live quotes to bridge 1 ETH:</h2>
+						<p class="results-filters">
+							<span class="from-filters">
+								FROM:  
+								<img src="img/ethereum-logo.svg" class="network-logo" alt="Ethereum Mainnet" data-href="from_1">
+								<img src="img/arbitrum-logo.svg?" class="network-logo" alt="Arbitrum One" data-href="from_42161">
+								<img src="img/optimism-logo.svg" class="network-logo" alt="OP Mainnet" data-href="from_10">
+								<img src="img/base-logo.svg" class="network-logo" alt="Base" data-href="from_8453">
+								<img src="img/polygon.png" class="network-logo" alt="Polygon" data-href="from_137">
+								<img src="img/zksync-logo.svg" class="network-logo" alt="zkSync Era" data-href="from_324">
+								<img src="img/linea-logo.svg" class="network-logo" alt="Linea" data-href="from_59144">
+							</span>
+							<span class="from-filters">
+								TO: 
+								<img src="img/ethereum-logo.svg" class="network-logo" alt="Ethereum Mainnet" data-href="to_1">
+								<img src="img/arbitrum-logo.svg?" class="network-logo" alt="Arbitrum One" data-href="to_42161">
+								<img src="img/optimism-logo.svg" class="network-logo" alt="OP Mainnet" data-href="to_10">
+								<img src="img/base-logo.svg" class="network-logo" alt="Base" data-href="to_8453">
+								<img src="img/polygon.png" class="network-logo" alt="Polygon" data-href="to_137">
+								<img src="img/zksync-logo.svg" class="network-logo" alt="zkSync Era" data-href="to_324">
+								<img src="img/linea-logo.svg" class="network-logo" alt="Linea" data-href="to_59144">
+							</span>
+							<span class="clearFilters">Clear Filters</span>
+						</p>
+						<div class="table-container fadeIn" id="tableContainer">
+							<table class="tableSorter">
+								<thead>
+									<tr>
+										<th class="quotes_route">Bridge Route</th>
+										<th class="quotes_from">From</th>
+										<th class="quotes_to">To</th>
+										<th class="quotes_eta">ETA</th>
+										<th class="quotes_userfees">User Fees</th>
+										<th class="quotes_bridgefees">Bridge Fees</th>
+										<th class="quotes_totalcost">Total Cost</th>
+										<th class="quotes_youget">You Get</th>
+										<th class="quotes_bridgenow">Bridge Now</th>
+									</tr>
+								</thead>
+								<tbody class="quoteData">
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
