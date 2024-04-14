@@ -48,6 +48,11 @@ body>.gradient2 {
 	max-height:40px;
 	max-width:100%;
 }
+.footer {
+    font-size: 12px;
+    margin-top: 30px;
+    text-align: center;
+}
 .status {
 	position: relative; 
 	transition: all 0.5s;
@@ -306,6 +311,10 @@ a.routeButton:hover {
 }
 .route_hyphen td.quotes_route {
 	background: url(img/hyphen-logo.svg) no-repeat;
+}
+.route_circlecctp td.quotes_route,
+.route_circle td.quotes_route {
+	background: url(img/circle-logo.svg) no-repeat;
 }
 td.quotes_route {
 	padding-left: 45px !important;

@@ -11,6 +11,9 @@ jQuery(document).ready(function() {
 	getGasPrice();
 	getEthPrice();
 
+	// 10s delay for updated quotes
+	setTimeout(`addQuotes()`,10 * 1000);
+
 	// slide bg gradient upwards 
 	setTimeout(`jQuery(".gradient").removeClass("gradient2");`,500);
 
@@ -271,6 +274,7 @@ function loadSlick() {
 }
 
 function addQuotes() { 
+	console.log('Adding "Just Bridge" quotes');
 	jQuery.get("https://fees-api.protopin.io:8080/get-quotes", function(rawData) {
 		var data = JSON.parse(rawData);
 	    jQuery(".quoteData").html('');
