@@ -11,9 +11,6 @@ jQuery(document).ready(function() {
 	getGasPrice();
 	getEthPrice();
 
-	// 10s delay for updated quotes
-	setTimeout(`addQuotes()`,10 * 1000);
-
 	// slide bg gradient upwards 
 	setTimeout(`jQuery(".gradient").removeClass("gradient2");`,500);
 
@@ -288,7 +285,8 @@ function addQuotes() {
 		} else if(data.totalQuotes == 0 && quoteRetries >= 5) { 
 			alert('Quote retrieval failed. Please try refreshing the page.');
 		} else { 
-		
+			console.log("Quote retrieval status: " + data.status);
+
 			try { 
 				ethPrice = data.usdTokenPrices.ETH;
 				maticPrice = data.usdTokenPrices.MATIC;
@@ -356,6 +354,15 @@ function addQuotes() {
 				
 			});
 		
+
+			if(data.status != 'complete') { 
+				// try again 
+				console.log("Quote retrieval incomplete, trying again in 10s");
+				quoteRetries = quoteRetries + 1;
+				setTimeout("addQuotes();",10 * 1000);
+			}
+
+
 		}
 
 	});
